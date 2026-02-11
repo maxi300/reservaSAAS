@@ -1,15 +1,15 @@
 'use client'
 
-import { useAuth } from '@/hooks/use-auth'
+import { useAuthStore } from '@/lib/auth-store'
 import { ProtectedRoute } from '@/components/protected-route'
 import { DashboardLayout } from '@/components/dashboard-layout'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
-import { Calendar, Users, BarChart3, TrendingUp } from 'lucide-react'
+import { Calendar, TrendingUp } from 'lucide-react'
 import { useState, useEffect } from 'react'
 import { apiClient } from '@/lib/api'
-import { Cita, Usuario } from '@/types'
+import { Cita } from '@/types'
 
 export default function DashboardPage() {
   return (
@@ -22,7 +22,7 @@ export default function DashboardPage() {
 }
 
 function DashboardContent() {
-  const { usuario } = useAuth()
+  const usuario = useAuthStore((state) => state.usuario)
   const [stats, setStats] = useState<any>({})
   const [isLoading, setIsLoading] = useState(true)
 

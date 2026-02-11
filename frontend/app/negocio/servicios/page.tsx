@@ -14,7 +14,6 @@ import { apiClient } from '@/lib/api'
 import { Servicio } from '@/types'
 import { formatCurrency } from '@/lib/utils'
 import { Clock, DollarSign, Plus, Edit2, Trash2 } from 'lucide-react'
-import { useState as useStateModal } from 'react'
 
 export default function ServiciosNegocioPage() {
   return (
