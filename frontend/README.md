@@ -1,179 +1,77 @@
-# ReservaSaaS - Frontend Next.js 16
+# Getting Started with Create React App
 
-Sistema de gestión de reservas y citas - Frontend moderno con Next.js 16, Tailwind CSS y TypeScript.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Características
+## Available Scripts
 
-- ✅ Autenticación JWT con protección de rutas
-- ✅ Dashboard Cliente - Buscar servicios, crear y gestionar reservas
-- ✅ Dashboard Negocio - Gestionar servicios, ver reservas, planes de suscripción
-- ✅ Dashboard Administrador - Gestión de usuarios y estadísticas
-- ✅ Interfaz intuitiva y responsive
-- ✅ Integración completa con API backend Django
+In the project directory, you can run:
 
-## Requisitos
+### `npm start`
 
-- Node.js 18+ 
-- npm o yarn
-- Backend Django corriendo en http://localhost:8000
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-## Instalación
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-### 1. Instalar dependencias
+### `npm test`
 
-```bash
-npm install
-# o
-yarn install
-```
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### 2. Configurar variables de entorno
+### `npm run build`
 
-Crea un archivo `.env.local` en la raíz del proyecto:
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-```env
-NEXT_PUBLIC_API_URL=http://localhost:8000/api
-```
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-### 3. Ejecutar servidor de desarrollo
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-```bash
-npm run dev
-# o
-yarn dev
-```
+### `npm run eject`
 
-La aplicación estará disponible en `http://localhost:3000`
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-## Estructura del Proyecto
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-```
-frontend/
-├── app/
-│   ├── layout.tsx              # Layout principal
-│   ├── page.tsx                # Página de inicio
-│   ├── login/                  # Página de login
-│   ├── dashboard/              # Dashboard principal
-│   ├── buscar-servicios/       # Búsqueda de servicios
-│   ├── reservar/               # Crear reserva
-│   ├── reservas/               # Mis reservas (cliente)
-│   ├── negocio/                # Dashboards del negocio
-│   │   ├── servicios/
-│   │   ├── reservas/
-│   │   └── suscripcion/
-│   ├── admin/                  # Dashboards administrador
-│   │   ├── usuarios/
-│   │   ├── estadisticas/
-│   │   └── planes/
-│   └── globals.css             # Estilos globales
-├── components/
-│   ├── ui/                     # Componentes base reutilizables
-│   ├── protected-route.tsx     # Componente de ruta protegida
-│   ├── navbar.tsx              # Barra de navegación
-│   ├── sidebar.tsx             # Barra lateral
-│   └── dashboard-layout.tsx    # Layout del dashboard
-├── hooks/
-│   └── use-auth.ts             # Hook de autenticación
-├── lib/
-│   ├── api.ts                  # Cliente HTTP
-│   ├── auth-store.ts           # Store de autenticación (Zustand)
-│   └── utils.ts                # Utilidades comunes
-├── types/
-│   └── index.ts                # Tipos TypeScript
-└── public/                     # Archivos estáticos
-```
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-## Rutas de la Aplicación
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-### Públicas
-- `/login` - Página de login
+## Learn More
 
-### Cliente
-- `/dashboard` - Dashboard del cliente
-- `/buscar-servicios` - Búsqueda de servicios
-- `/reservar/[id]` - Crear reserva
-- `/reservas` - Mis reservas
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-### Negocio
-- `/negocio/servicios` - Mis servicios
-- `/negocio/reservas` - Reservas recibidas
-- `/negocio/suscripcion` - Gestión de suscripción
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Administrador
-- `/admin/usuarios` - Gestión de usuarios
-- `/admin/estadisticas` - Estadísticas del sistema
-- `/admin/planes` - Gestión de planes
+### Code Splitting
 
-## Credenciales de Demo
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-```
-Admin:
-  Usuario: admin
-  Contraseña: admin123
+### Analyzing the Bundle Size
 
-Negocio:
-  Usuario: negocio1
-  Contraseña: negocio123
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-Cliente:
-  Usuario: cliente1
-  Contraseña: cliente123
-```
+### Making a Progressive Web App
 
-## Tecnologías
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-- **Next.js 16** - Framework React
-- **TypeScript** - Lenguaje tipado
-- **Tailwind CSS** - Estilos CSS
-- **Zustand** - State management
-- **Axios** - Cliente HTTP
-- **Lucide React** - Iconos
-- **Recharts** - Gráficas
-- **js-cookie** - Gestión de cookies
-- **date-fns** - Manejo de fechas
+### Advanced Configuration
 
-## Scripts Disponibles
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-```bash
-# Desarrollo
-npm run dev
+### Deployment
 
-# Build para producción
-npm run build
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-# Iniciar servidor producción
-npm start
+### `npm run build` fails to minify
 
-# Lint
-npm run lint
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-## Build para Producción
 
-```bash
-npm run build
-npm start
-```
+###
+### LIBRERIAS MATERIAL UI
+ ### npm install @mui/material @emotion/react @emotion/styled @mui/icons-material
 
-## Notas Importantes
-
-1. El backend debe estar corriendo en http://localhost:8000 para desarrollo
-2. Los tokens JWT se almacenan en cookies seguras
-3. Las rutas están protegidas por rol de usuario
-4. La UI es totalmente responsive para móvil, tablet y desktop
-
-## Integración con Backend
-
-El frontend se comunica con el backend Django a través de:
-
-- **Login**: POST `/api/token/` - Obtener tokens JWT
-- **Usuarios**: GET/POST/PATCH `/api/usuarios/`
-- **Servicios**: GET/POST/PATCH/DELETE `/api/citas/servicios/`
-- **Citas**: GET/POST/PATCH `/api/citas/reserva/`
-- **Planes**: GET `/api/pagos/planes/`
-- **Suscripciones**: GET/POST `/api/pagos/suscripciones/`
-
-Todos los endpoints requieren autenticación con token JWT en el header:
-```
-Authorization: Bearer <token>
-```
+###
